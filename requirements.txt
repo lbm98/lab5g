@@ -3,3 +3,6 @@ matplotlib
 numpy
 folium
 geopy
+plotly
+pandas
+requests
