@@ -15868,12 +15868,29 @@ Different use cases have varying levels of acceptable latency.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Question:</strong> Do you have requirements wrt. packet loss? Why?</p>
-<p><strong>Answer:</strong>
-| Loss    | Rating     |
-|---------|------------|
-| &lt;1%     | good       |
-| 1%-2.5% | acceptable |
-| 2.5%-5% | poor       |</p>
+<p><strong>Answer:</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Loss</th>
+  <th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>&lt;1%</td>
+  <td>good</td>
+</tr>
+<tr>
+  <td>1%-2.5%</td>
+  <td>acceptable</td>
+</tr>
+<tr>
+  <td>2.5%-5%</td>
+  <td>poor</td>
+</tr>
+</tbody>
+</table>
 <p>I believe an &quot;acceptable&quot; rating to be reasonable.
 So we aim for a maximum of 2.5% packet loss.</p>
 <p><strong>Sources:</strong></p>
