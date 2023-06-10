@@ -261,7 +261,7 @@ services:
         image: oaisoftwarealliance/oai-gnb:develop
 #        entrypoint: ["tail", "-f", "/dev/null"]
         volumes:
-            - ./conf/gnb.conf:/opt/oai-gnb/etc/mounted.conf
+            - ./conf/gnb.162.conf:/opt/oai-gnb/etc/mounted.conf
         privileged: true
         container_name: oai-gnb
         environment:
