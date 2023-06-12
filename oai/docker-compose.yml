@@ -261,7 +261,8 @@ services:
         image: oaisoftwarealliance/oai-gnb:develop
 #        entrypoint: ["tail", "-f", "/dev/null"]
         volumes:
-            - ./conf/gnb.106.conf:/opt/oai-gnb/etc/mounted.conf
+#            - ./conf/gnb.106.conf:/opt/oai-gnb/etc/mounted.conf
+            - ./conf/gnb.217.conf:/opt/oai-gnb/etc/mounted.conf
         privileged: true
         container_name: oai-gnb
         environment:
@@ -302,9 +303,9 @@ services:
             OPC: '63bfa50ee6523365ff14c1f45f88737d'
             DNN: oai
             NSSAI_SST: 1
-            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 -C 3319680000 --nokrnmod --log_config.global_log_options level,nocolor,time
+#            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 -C 3319680000 --nokrnmod --log_config.global_log_options level,nocolor,time
 #            3339.66 = 3300.60  + 217/2*12*30e-3
-#            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 217 --numerology 1 -C 3339660000 --nokrnmod --log_config.global_log_options level,nocolor,time
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 217 --numerology 1 -C 3339660000 --nokrnmod --log_config.global_log_options level,nocolor,time
 #            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 111 --band 2 --numerology 1 -C 1960000000 --nokrnmod --log_config.global_log_options level,nocolor,time
         depends_on:
             - oai-gnb
