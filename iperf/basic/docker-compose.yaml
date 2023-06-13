@@ -6,7 +6,7 @@ services:
         container_name: rfsim5g-oai-gnb
         environment:
             RFSIMULATOR: server
-            USE_ADDITIONAL_OPTIONS: --parallel-config PARALLEL_SINGLE_THREAD --rfsim --phy-test
+            USE_ADDITIONAL_OPTIONS: --parallel-config PARALLEL_SINGLE_THREAD --rfsim --noS1
         networks:
             public_net:
                 ipv4_address: 192.168.71.140
@@ -24,7 +24,7 @@ services:
         container_name: rfsim5g-oai-nr-ue
         environment: 
             RFSIMULATOR: 192.168.71.140
-            USE_ADDITIONAL_OPTIONS: --rfsim --phy-test --rrc_config_path /opt/oai-nr-ue/bin
+            USE_ADDITIONAL_OPTIONS: --rfsim --noS1 --rrc_config_path /opt/oai-nr-ue/bin
         depends_on:
             - oai-gnb
         networks:
