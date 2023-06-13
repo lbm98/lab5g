@@ -24,7 +24,7 @@ services:
         container_name: rfsim5g-oai-nr-ue
         environment: 
             RFSIMULATOR: 192.168.71.140
-            USE_ADDITIONAL_OPTIONS: --rfsim --noS1 --rrc_config_path /opt/oai-nr-ue/bin
+            USE_ADDITIONAL_OPTIONS: --rfsim --noS1 -r 106 -C 3319680000 --rrc_config_path /opt/oai-nr-ue/bin
         depends_on:
             - oai-gnb
         networks:
