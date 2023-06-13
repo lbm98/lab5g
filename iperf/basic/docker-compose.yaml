@@ -33,6 +33,8 @@ services:
         volumes:
             - ./nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
             - ./channelmod_rfsimu.conf:/opt/oai-nr-ue/etc/channelmod_rfsimu.conf
+            - ./rbconfig.raw:/opt/oai-nr-ue/bin/rbconfig.raw
+            - ./reconfig.raw:/opt/oai-nr-ue/bin/reconfig.raw
         healthcheck:
             test: /bin/bash -c "pgrep nr-uesoftmodem"
             interval: 10s
