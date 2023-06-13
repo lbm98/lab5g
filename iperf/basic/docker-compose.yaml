@@ -6,7 +6,7 @@ services:
         container_name: rfsim5g-oai-gnb
         environment:
             RFSIMULATOR: server
-            USE_ADDITIONAL_OPTIONS: -O gnb.sa.band78.106prb.rfsim.conf --parallel-config PARALLEL_SINGLE_THREAD --rfsim --phy-test
+            USE_ADDITIONAL_OPTIONS: --parallel-config PARALLEL_SINGLE_THREAD --rfsim --phy-test
         networks:
             public_net:
                 ipv4_address: 192.168.71.140
