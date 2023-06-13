@@ -7,8 +7,6 @@ services:
         environment:
             RFSIMULATOR: server
             USE_ADDITIONAL_OPTIONS: -O gnb.sa.band78.106prb.rfsim.conf --parallel-config PARALLEL_SINGLE_THREAD --rfsim --phy-test
-        depends_on:
-            - oai-ext-dn
         networks:
             public_net:
                 ipv4_address: 192.168.71.140
