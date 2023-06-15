@@ -25,7 +25,7 @@ docker compose up -d
 PC 1 (GNB)
 ```bash
 docker exec -it rfsim5g-oai-gnb bash
-ping -I oaitun_enb1 10.0.1.2
+ping -I -c20 oaitun_enb1 10.0.1.2
 ```
 
 ## Iperf Test
@@ -39,5 +39,5 @@ iperf -s -i 1 -u -B 10.0.1.2
 PC 1 (GNB)
 ```bash
 docker exec -it rfsim5g-oai-gnb bash
-iperf -c 10.0.1.2 -u -i 1 -t 20 -b 500K --bind 10.0.1.1
+iperf -c 10.0.1.2 -u -i 1 -t 10 -b 500K --bind 10.0.1.1
 ```
